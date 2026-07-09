@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#134B33">
+<title>О55 — недвижимость Омска | Елена Васильевна Косаченко, риелтор</title>
+<meta name="description" content="Риелтор в Омске Елена Васильевна Косаченко: подбор квартир, витрина объектов с Avito, ЦИАН и Домклик, ипотечный калькулятор, сопровождение сделки. Заявка в один клик — звонок, Telegram, MAX или VK.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFFFFF;
+    --bg-soft:#EFF7F1;
+    --ink:#132018;
+    --green:#1E6B49;
+    --green-dark:#134B33;
+    --green-light:#8FD3AA;
+    --mint:#E4F5EA;
+    --slate:#3E5348;
+    --card:#FFFFFF;
+    --line: rgba(19,32,24,.13);
+    --radius:4px;
+    --shadow: 0 24px 48px -28px rgba(19,32,24,.28);
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  html{scroll-behavior:smooth;}
+  html,body{max-width:100%;overflow-x:hidden;overscroll-behavior-x:none;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Manrope',sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    -webkit-text-size-adjust:100%;
+  }
+  * , *::before, *::after{min-width:0;}
+  img,svg,video,canvas{max-width:100%;}
+  a,button,.btn,.chip,.listing-fav,.quickbar-toggle,.to-top{touch-action:manipulation;}
+  .btn:active,.listing-fav:active,.quickbar-toggle:active,.to-top:active{transform:scale(.96);}
+  section[id]{scroll-margin-top:96px;}
+  @media (max-width:880px){ section[id]{scroll-margin-top:64px;} }
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:600;margin:0;letter-spacing:-.01em;}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--green);
+    display:flex;align-items:center;gap:10px;
+    margin-bottom:14px;
+  }
+  .eyebrow::before{content:"";width:22px;height:1px;background:var(--green);display:inline-block;}
+
+  /* ===== Topbar ===== */
+  .topbar{background:var(--green-dark);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:12.5px;}
+  .topbar-row{display:flex;align-items:center;justify-content:space-between;padding:9px 24px;max-width:1120px;margin:0 auto;gap:14px;flex-wrap:wrap;}
+  .topbar-links{display:flex;gap:22px;flex-wrap:wrap;}
+  .topbar a{text-decoration:none;opacity:.92;display:inline-flex;align-items:center;gap:6px;}
+  .topbar a:hover{opacity:1;text-decoration:underline;}
+  .topbar svg{width:13px;height:13px;flex-shrink:0;}
+
+  /* ===== Header ===== */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1120px;margin:0 auto;gap:20px;}
+  .logo{font-family:'Fraunces',serif;font-weight:700;font-size:22px;letter-spacing:-.02em;display:flex;align-items:baseline;gap:6px;white-space:nowrap;}
+  .logo span{color:var(--green);}
+  .navlinks{display:flex;align-items:center;gap:24px;font-size:14px;font-weight:600;flex-wrap:wrap;}
+  .navlinks a{text-decoration:none;opacity:.82;transition:opacity .15s;white-space:nowrap;}
+  .navlinks a:hover{opacity:1;}
+  .nav-cta{display:flex;align-items:center;gap:10px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:'Manrope',sans-serif;font-weight:700;font-size:14.5px;
+    padding:12px 22px;border-radius:var(--radius);
+    text-decoration:none;border:1px solid transparent;cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--green);color:#fff;}
+  .btn-primary:hover{background:var(--green-dark);transform:translateY(-1px);}
+  .btn-soft{background:var(--mint);color:var(--green-dark);border-color:var(--green-light);}
+  .btn-soft:hover{background:var(--green-light);transform:translateY(-1px);}
+  .btn-ghost{border-color:var(--ink);background:transparent;}
+  .btn-ghost:hover{background:var(--ink);color:#fff;}
+  .btn-outline-green{border-color:var(--green);background:transparent;color:var(--green-dark);}
+  .btn-outline-green:hover{background:var(--green);color:#fff;}
+  .btn-sm{padding:9px 16px;font-size:13px;}
+  .btn-block{width:100%;justify-content:center;}
+
+  /* ===== Hero ===== */
+  .hero{
+    position:relative;overflow:hidden;
+    padding:96px 0 80px;
+    background:
+      radial-gradient(1100px 480px at 82% -10%, rgba(30,107,73,.10), transparent 60%),
+      var(--bg);
+  }
+  .leaf-texture{
+    position:absolute;inset:0;opacity:.045;pointer-events:none;
+    background-image: repeating-linear-gradient(0deg, var(--ink) 0 2px, transparent 2px 42px),
+                       repeating-linear-gradient(90deg, var(--ink) 0 2px, transparent 2px 84px);
+  }
+  .hero-grid{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;}
+  .hero h1{font-size:clamp(36px,5vw,60px);line-height:1.06;}
+  .hero h1 em{font-style:italic;color:var(--green);}
+  .hero p.lead{font-size:17.5px;max-width:46ch;color:var(--slate);margin:22px 0 32px;}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;}
+  .mint-gem{
+    width:100%;aspect-ratio:1/1.05;
+    background:linear-gradient(160deg, var(--green-light), var(--green) 45%, var(--green-dark) 130%);
+    clip-path:polygon(50% 0%, 90% 20%, 100% 55%, 72% 100%, 28% 100%, 0% 55%, 10% 20%);
+    position:relative;box-shadow:0 30px 60px -20px rgba(19,75,51,.4);
+  }
+  .mint-gem::after{
+    content:"";position:absolute;inset:14%;
+    clip-path:polygon(50% 0%, 90% 20%, 100% 55%, 72% 100%, 28% 100%, 0% 55%, 10% 20%);
+    background:linear-gradient(160deg, rgba(255,255,255,.4), transparent 60%);
+  }
+  .hero-stats{display:flex;gap:32px;margin-top:44px;padding-top:28px;border-top:1px solid var(--line);flex-wrap:wrap;}
+  .stat b{font-family:'Fraunces',serif;font-size:26px;display:block;}
+  .stat span{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--slate);text-transform:uppercase;letter-spacing:.06em;}
+
+  /* ===== Section base ===== */
+  section{padding:88px 0;}
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:44px;flex-wrap:wrap;}
+  .section-head h2{font-size:clamp(28px,3.4vw,38px);}
+  .section-head p{color:var(--slate);max-width:52ch;margin-top:10px;}
+
+  /* ===== Services ===== */
+  .services{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .service{background:var(--card);padding:36px 30px;}
+  .service .num{font-family:'IBM Plex Mono',monospace;color:var(--green);font-size:13px;margin-bottom:18px;display:block;}
+  .service h3{font-size:20px;margin-bottom:10px;}
+  .service p{color:var(--slate);font-size:14.5px;margin:0 0 16px;}
+  .service a{font-size:13.5px;font-weight:700;color:var(--green-dark);text-decoration:none;display:inline-flex;align-items:center;gap:6px;}
+  .service a:hover{text-decoration:underline;}
+
+  /* ===== О риелторе ===== */
+  .about{background:var(--bg);}
+  .about-grid{display:grid;grid-template-columns:.62fr 1.38fr;gap:52px;align-items:center;}
+  .avatar-frame{
+    position:relative;aspect-ratio:3/3.6;border-radius:6px;overflow:hidden;
+    background:linear-gradient(155deg,#CFE9DA,#8FC7A7 55%,var(--green) 140%);
+    box-shadow:var(--shadow);
+  }
+  .avatar-frame svg{position:absolute;inset:0;width:100%;height:100%;}
+  .about-badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;}
+  .badge{
+    font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.03em;
+    border:1px solid var(--line);border-radius:999px;padding:7px 13px;color:var(--slate);background:var(--bg-soft);
+  }
+  .about h2{font-size:clamp(26px,3.2vw,34px);margin-bottom:6px;}
+  .about .role{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--green);text-transform:uppercase;letter-spacing:.08em;margin-bottom:18px;display:block;}
+  .about p.bio{color:var(--slate);font-size:15.5px;max-width:60ch;margin-bottom:26px;}
+  .about-stats{display:grid;grid-template-columns:repeat(4,auto);gap:34px;border-top:1px solid var(--line);padding-top:24px;margin-bottom:26px;}
+  .about-stats .stat b{font-size:24px;}
+  .about-cta{display:flex;gap:12px;flex-wrap:wrap;}
+  .about-contact-mini{display:flex;gap:22px;flex-wrap:wrap;margin-bottom:22px;}
+  .about-contact-mini a{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:700;text-decoration:none;color:var(--green-dark);}
+  .about-contact-mini a svg{width:16px;height:16px;stroke:var(--green);flex-shrink:0;}
+  .about-contact-mini a:hover{text-decoration:underline;}
+
+  /* ===== Listings ===== */
+  .listing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .listing-card{
+    position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .listing-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
+  .listing-photo{
+    aspect-ratio:4/3;position:relative;
+    background:linear-gradient(135deg,#CFE9DA,#8FC7A7);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .listing-photo svg{width:46px;height:46px;opacity:.55;}
+  .listing-source{
+    position:absolute;top:12px;left:12px;background:rgba(19,32,24,.82);color:#fff;
+    font-family:'IBM Plex Mono',monospace;font-size:11px;padding:5px 9px;border-radius:3px;letter-spacing:.04em;
+  }
+  .listing-fav{
+    position:absolute;top:12px;right:12px;width:30px;height:30px;border-radius:50%;
+    background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;
+    border:none;cursor:pointer;transition:transform .15s ease;
+  }
+  .listing-fav:hover{transform:scale(1.08);}
+  .listing-fav svg{width:15px;height:15px;stroke:var(--green-dark);fill:none;transition:fill .15s ease, stroke .15s ease;}
+  .listing-fav.is-fav svg{fill:#D9584F;stroke:#D9584F;}
+  .listing-fav.is-fav{animation:favPop .35s cubic-bezier(.34,1.56,.64,1);}
+  @keyframes favPop{0%{transform:scale(1);}45%{transform:scale(1.25);}100%{transform:scale(1);}}
+  #favCounter{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--green-dark);font-weight:700;}
+  .listing-body{padding:20px 22px 22px;}
+  .listing-price{font-family:'Fraunces',serif;font-size:23px;margin-bottom:6px;}
+  .listing-addr{font-size:14px;color:var(--slate);margin-bottom:14px;}
+  .listing-meta{display:flex;gap:14px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink);opacity:.7;margin-bottom:18px;}
+  .listing-actions{display:flex;gap:10px;border-top:1px solid var(--line);padding-top:14px;}
+  .listing-link{
+    flex:1;display:flex;align-items:center;justify-content:center;gap:6px;
+    font-weight:700;font-size:13.5px;text-decoration:none;color:#fff;background:var(--green);
+    padding:10px 12px;border-radius:var(--radius);
+  }
+  .listing-link:hover{background:var(--green-dark);}
+  .listing-call{
+    display:flex;align-items:center;justify-content:center;
+    width:40px;flex-shrink:0;border:1px solid var(--line);border-radius:var(--radius);
+    text-decoration:none;color:var(--green-dark);
+  }
+  .listing-call:hover{border-color:var(--green);background:var(--mint);}
+  .listing-call svg{width:16px;height:16px;}
+  .source-note{
+    margin-top:26px;font-size:13px;color:var(--slate);
+    border-left:2px solid var(--green-light);padding-left:14px;
+  }
+
+  /* ===== Calculator ===== */
+  .calc{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start;}
+  .calc-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:32px;box-shadow:var(--shadow);}
+  .calc-field{margin-bottom:22px;}
+  .calc-field label{display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--slate);margin-bottom:10px;}
+  .calc-field label b{color:var(--green-dark);font-family:'Manrope',sans-serif;font-size:13.5px;}
+  .calc-field input[type=range]{width:100%;accent-color:var(--green);}
+  .calc-result{background:var(--green-dark);color:#fff;border-radius:6px;padding:26px 28px;margin-top:6px;}
+  .calc-result .big{font-family:'Fraunces',serif;font-size:34px;}
+  .calc-result span{font-family:'IBM Plex Mono',monospace;font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;opacity:.75;}
+  .calc-note{color:var(--slate);font-size:13px;margin-top:14px;}
+  .calc-copy h2{margin-bottom:14px;}
+  .calc-copy p{color:var(--slate);max-width:44ch;margin-bottom:22px;}
+  .calc-list{list-style:none;padding:0;margin:0 0 26px;display:flex;flex-direction:column;gap:12px;}
+  .calc-list li{display:flex;gap:10px;font-size:14.5px;color:var(--slate);}
+  .calc-list svg{width:18px;height:18px;stroke:var(--green);flex-shrink:0;margin-top:1px;}
+
+  /* ===== Этапы сделки ===== */
+  .steps{background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .steps-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;}
+  .step{padding:0 24px 0 0;position:relative;}
+  .step:not(:last-child)::after{
+    content:"";position:absolute;top:19px;right:-2px;width:calc(100% - 44px);height:1px;
+    background:repeating-linear-gradient(90deg, var(--green) 0 6px, transparent 6px 12px);
+  }
+  .step-num{
+    font-family:'Fraunces',serif;font-size:20px;color:var(--green);
+    width:38px;height:38px;border:1px solid var(--green);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;margin-bottom:18px;background:var(--card);position:relative;z-index:1;
+  }
+  .step h3{font-size:16.5px;margin-bottom:8px;}
+  .step p{color:var(--slate);font-size:13.5px;margin:0;}
+
+  /* ===== Testimonials ===== */
+  .testi{background:var(--bg-soft);}
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .testi-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;gap:16px;}
+  .testi-stars{display:flex;gap:3px;}
+  .testi-stars svg{width:15px;height:15px;fill:var(--green);stroke:none;}
+  .testi-card p{color:var(--slate);font-size:14.5px;margin:0;flex:1;}
+  .testi-who{display:flex;align-items:center;gap:12px;padding-top:14px;border-top:1px solid var(--line);}
+  .testi-avatar{width:36px;height:36px;border-radius:50%;background:var(--green-light);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:700;color:var(--green-dark);flex-shrink:0;}
+  .testi-who b{display:block;font-size:13.5px;}
+  .testi-who span{display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--slate);}
+
+  /* ===== FAQ ===== */
+  .faq{background:var(--bg);}
+  .faq-list{display:flex;flex-direction:column;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;}
+  .faq-item{background:var(--card);}
+  .faq-item summary{
+    cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;
+    padding:20px 24px;font-weight:700;font-size:15px;gap:16px;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary .plus{width:22px;height:22px;border-radius:50%;border:1px solid var(--green);flex-shrink:0;position:relative;transition:transform .2s ease;}
+  .faq-item summary .plus::before,.faq-item summary .plus::after{content:"";position:absolute;background:var(--green);}
+  .faq-item summary .plus::before{left:6px;right:6px;top:50%;height:1.5px;transform:translateY(-50%);}
+  .faq-item summary .plus::after{top:6px;bottom:6px;left:50%;width:1.5px;transform:translateX(-50%);}
+  .faq-item[open] summary .plus{transform:rotate(45deg);}
+  .faq-item .faq-a{padding:0 24px 22px;color:var(--slate);font-size:14.5px;max-width:70ch;}
+
+  /* ===== Region CTA ===== */
+  .region{
+    background:var(--green-dark);color:#fff;border-radius:6px;
+    padding:56px 48px;display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap;
+    position:relative;overflow:hidden;
+  }
+  .region::before{
+    content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;
+    background:radial-gradient(circle, rgba(143,211,170,.45), transparent 70%);
+  }
+  .region .eyebrow{color:var(--green-light);}
+  .region .eyebrow::before{background:var(--green-light);}
+  .region h2{color:#fff;font-size:clamp(24px,3vw,32px);max-width:22ch;position:relative;}
+  .region p{color:rgba(255,255,255,.8);margin-top:10px;max-width:44ch;font-size:14.5px;position:relative;}
+  .region .region-cta{position:relative;flex-shrink:0;display:flex;gap:12px;flex-wrap:wrap;}
+
+  /* ===== Social ===== */
+  .social-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;}
+  .social-card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:26px 18px;text-align:center;text-decoration:none;color:var(--ink);
+    transition:border-color .15s, transform .15s;
+  }
+  .social-card:hover{border-color:var(--green);transform:translateY(-3px);}
+  .social-card svg{width:26px;height:26px;margin:0 auto 12px;stroke:var(--green);}
+  .social-card b{display:block;font-size:14px;font-weight:700;}
+  .social-card span{display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--slate);margin-top:4px;}
+  .centered-grid{display:flex !important;flex-wrap:wrap;justify-content:center;gap:20px;}
+  .centered-grid .social-card{flex:0 1 250px;min-width:200px;}
+
+  /* ===== Form ===== */
+  .contact{background:var(--bg-soft);border-top:1px solid var(--line);}
+  .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start;}
+  .contact-info p{color:var(--slate);font-size:15px;max-width:42ch;}
+  .direct-card{
+    margin-top:24px;padding:22px 22px;border:1px solid var(--line);border-radius:8px;
+    background:var(--card);
+  }
+  .direct-card h3{font-size:15px;margin-bottom:14px;}
+  .direct-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-top:1px solid var(--line);}
+  .direct-row:first-of-type{border-top:none;padding-top:0;}
+  .direct-row svg{width:18px;height:18px;stroke:var(--green);flex-shrink:0;}
+  .direct-row a{text-decoration:none;font-weight:700;font-size:14.5px;}
+  .direct-row a:hover{color:var(--green-dark);text-decoration:underline;}
+  .direct-row .qbtn{margin-left:auto;}
+  .tg-note{
+    margin-top:24px;padding:16px 18px;border:1px solid var(--line);border-radius:var(--radius);
+    font-size:13px;color:var(--slate);background:var(--card);
+  }
+  form{display:flex;flex-direction:column;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:28px;}
+  .field label{display:block;font-family:'IBM Plex Mono',monospace;font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--slate);margin-bottom:6px;}
+  .field input, .field textarea{
+    width:100%;border:1px solid var(--line);background:#fff;border-radius:var(--radius);
+    padding:13px 14px;font-family:'Manrope',sans-serif;font-size:14.5px;color:var(--ink);
+  }
+  .field input:focus, .field textarea:focus{outline:2px solid var(--green-light);outline-offset:1px;border-color:var(--green);}
+  .field textarea{resize:vertical;min-height:96px;}
+  #usernameField{animation:fieldIn .25s cubic-bezier(.2,.7,.3,1);}
+  @keyframes fieldIn{from{opacity:0;transform:translateY(-6px);}to{opacity:1;transform:translateY(0);}}
+
+  .channel-field label{display:block;font-family:'IBM Plex Mono',monospace;font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--slate);margin-bottom:10px;}
+  .channel-options{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}
+  .channel-option{position:relative;}
+  .channel-option input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer;margin:0;}
+  .channel-option .chip{
+    display:flex;flex-direction:column;align-items:center;gap:6px;
+    border:1px solid var(--line);border-radius:var(--radius);padding:12px 6px;
+    font-size:11.5px;font-weight:700;text-align:center;transition:all .15s ease;background:#fff;
+  }
+  .channel-option .chip svg{width:18px;height:18px;stroke:var(--slate);transition:stroke .15s ease;}
+  .channel-option input:checked + .chip{border-color:var(--green);background:var(--mint);color:var(--green-dark);}
+  .channel-option input:checked + .chip svg{stroke:var(--green-dark);}
+  .channel-option input:focus-visible + .chip{outline:2px solid var(--green-light);outline-offset:2px;}
+
+  .checkline{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--slate);margin-top:2px;}
+  .checkline input{margin-top:3px;}
+  #formStatus{font-size:13.5px;margin-top:4px;min-height:18px;}
+  #formStatus.ok{color:var(--green-dark);}
+  #formStatus.err{color:#B23A3A;}
+
+  footer{padding:44px 0;border-top:1px solid var(--line);background:var(--bg);}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;margin-bottom:32px;}
+  .footer-brand .logo{margin-bottom:12px;}
+  .footer-brand p{color:var(--slate);font-size:13.5px;max-width:36ch;margin:0;}
+  .footer-col h4{font-family:'IBM Plex Mono',monospace;font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--slate);margin-bottom:14px;}
+  .footer-col a{display:block;text-decoration:none;font-size:14px;margin-bottom:10px;opacity:.85;}
+  .footer-col a:hover{opacity:1;color:var(--green-dark);}
+  .footer-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--slate);padding-top:24px;border-top:1px solid var(--line);}
+
+  /* ===== Floating quick contact ===== */
+  .quickbar{position:fixed;right:22px;bottom:22px;z-index:60;display:flex;flex-direction:column;align-items:flex-end;gap:10px;}
+  .quickbar-options{display:flex;flex-direction:column;gap:10px;margin-bottom:2px;opacity:0;transform:translateY(8px);pointer-events:none;transition:all .18s ease;}
+  .quickbar.open .quickbar-options{opacity:1;transform:translateY(0);pointer-events:auto;}
+  .quickbar-options a{
+    display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);
+    border-radius:999px;padding:10px 16px 10px 10px;text-decoration:none;color:var(--ink);
+    font-size:13px;font-weight:700;box-shadow:var(--shadow);white-space:nowrap;
+  }
+  .quickbar-options a .ic{width:32px;height:32px;border-radius:50%;background:var(--mint);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .quickbar-options a svg{width:16px;height:16px;stroke:var(--green-dark);}
+  .quickbar-options a:hover{border-color:var(--green);}
+  .quickbar-toggle{
+    width:58px;height:58px;border-radius:50%;background:var(--green);color:#fff;border:none;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow);transition:transform .15s ease, background .15s ease;
+  }
+  .quickbar-toggle:hover{background:var(--green-dark);transform:translateY(-2px);}
+  .quickbar-toggle svg{width:24px;height:24px;transition:transform .2s ease;}
+  .quickbar.open .quickbar-toggle svg{transform:rotate(45deg);}
+
+  /* ===== Scroll progress ===== */
+  .progress-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-light),var(--green));width:0%;z-index:100;transition:width .1s linear;}
+
+  /* ===== Reveal animations ===== */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.3,1), transform .7s cubic-bezier(.2,.7,.3,1);}
+  .reveal.in-view{opacity:1;transform:translateY(0);}
+  .reveal-stagger > *{opacity:0;transform:translateY(24px);transition:opacity .6s cubic-bezier(.2,.7,.3,1), transform .6s cubic-bezier(.2,.7,.3,1);}
+  .reveal-stagger.in-view > *{opacity:1;transform:translateY(0);}
+  .reveal-stagger.in-view > *:nth-child(1){transition-delay:.04s;}
+  .reveal-stagger.in-view > *:nth-child(2){transition-delay:.11s;}
+  .reveal-stagger.in-view > *:nth-child(3){transition-delay:.18s;}
+  .reveal-stagger.in-view > *:nth-child(4){transition-delay:.25s;}
+  .reveal-stagger.in-view > *:nth-child(5){transition-delay:.32s;}
+  .reveal-stagger.in-view > *:nth-child(6){transition-delay:.39s;}
+
+  .hero-grid > div:first-child{opacity:0;transform:translateY(18px);animation:heroIn .8s .1s cubic-bezier(.2,.7,.3,1) forwards;}
+  .mint-gem{opacity:0;transform:translateY(18px) scale(.96);animation:heroIn .9s .25s cubic-bezier(.2,.7,.3,1) forwards;}
+  @keyframes heroIn{to{opacity:1;transform:translateY(0) scale(1);}}
+
+  /* Active nav underline */
+  .navlinks a{position:relative;padding-bottom:3px;}
+  .navlinks a::after{content:"";position:absolute;left:0;right:100%;bottom:-1px;height:2px;background:var(--green);transition:right .2s ease;}
+  .navlinks a:hover::after,.navlinks a.active::after{right:0;}
+  .navlinks a.active{opacity:1;color:var(--green-dark);}
+
+  /* ===== Back to top ===== */
+  .to-top{
+    position:fixed;left:22px;bottom:22px;z-index:59;width:44px;height:44px;border-radius:50%;
+    background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);cursor:pointer;
+    display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;
+    transform:translateY(10px);transition:all .25s ease;
+  }
+  .to-top.show{opacity:1;pointer-events:auto;transform:translateY(0);}
+  .to-top:hover{border-color:var(--green);transform:translateY(-2px);}
+  .to-top svg{width:17px;height:17px;stroke:var(--green-dark);}
+
+  /* ===== Mobile menu ===== */
+  .menu-toggle{display:none;width:40px;height:40px;border-radius:var(--radius);border:1px solid var(--line);background:#fff;cursor:pointer;align-items:center;justify-content:center;flex-shrink:0;}
+  .menu-toggle svg{width:19px;height:19px;}
+  .menu-toggle .icon-close{display:none;}
+  .menu-toggle.open .icon-burger{display:none;}
+  .menu-toggle.open .icon-close{display:block;}
+
+  .mobile-drawer{
+    position:fixed;inset:0;z-index:80;visibility:hidden;pointer-events:none;
+  }
+  .mobile-drawer-backdrop{position:absolute;inset:0;background:rgba(19,32,24,.5);opacity:0;backdrop-filter:blur(2px);transition:opacity .3s ease;}
+  .mobile-drawer-panel{
+    position:absolute;top:0;right:0;bottom:0;width:min(320px,84vw);background:#fff;
+    box-shadow:-16px 0 40px rgba(19,32,24,.22);padding:24px;padding-top:max(24px,env(safe-area-inset-top));
+    padding-bottom:max(24px,env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:6px;
+    transform:translateX(100%);transition:transform .38s cubic-bezier(.16,.9,.24,1);overflow-y:auto;
+    overscroll-behavior:contain;touch-action:pan-y;
+  }
+  .mobile-drawer-grip{
+    position:absolute;left:6px;top:50%;transform:translateY(-50%);
+    width:4px;height:56px;border-radius:4px;background:var(--line);
+  }
+  .mobile-drawer.open{visibility:visible;pointer-events:auto;}
+  .mobile-drawer.open .mobile-drawer-backdrop{opacity:1;}
+  .mobile-drawer.open .mobile-drawer-panel{transform:translateX(0);}
+  .mobile-drawer-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;}
+  .mobile-drawer-panel a{
+    display:flex;align-items:center;padding:14px 4px;text-decoration:none;color:var(--ink);
+    font-size:16px;font-weight:700;border-bottom:1px solid var(--line);
+    opacity:0;transform:translateX(14px);transition:opacity .35s ease, transform .35s ease;
+  }
+  .mobile-drawer.open .mobile-drawer-panel a{opacity:1;transform:translateX(0);}
+  .mobile-drawer.open .mobile-drawer-panel a:nth-child(3){transition-delay:.06s;}
+  .mobile-drawer.open .mobile-drawer-panel a:nth-child(4){transition-delay:.1s;}
+  .mobile-drawer.open .mobile-drawer-panel a:nth-child(5){transition-delay:.14s;}
+  .mobile-drawer.open .mobile-drawer-panel a:nth-child(6){transition-delay:.18s;}
+  .mobile-drawer.open .mobile-drawer-panel a:nth-child(7){transition-delay:.22s;}
+  .mobile-drawer.open .mobile-drawer-panel a:nth-child(8){transition-delay:.26s;}
+  .mobile-drawer-panel a:active{background:var(--mint);}
+  .mobile-drawer-cta{display:flex;flex-direction:column;gap:10px;margin-top:18px;}
+  .mobile-drawer-contact{margin-top:auto;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--slate);display:flex;flex-direction:column;gap:8px;}
+  .mobile-drawer-contact a{border:none;padding:0;font-size:14px;color:var(--green-dark);opacity:1;transform:none;}
+  .mobile-drawer-social{display:flex;gap:10px;margin-top:6px;}
+  .mobile-drawer-social a{
+    border:none;padding:0;width:38px;height:38px;border-radius:50%;background:var(--mint);
+    display:flex;align-items:center;justify-content:center;opacity:1;transform:none;flex-shrink:0;
+  }
+  .mobile-drawer-social a svg{width:17px;height:17px;stroke:var(--green-dark);}
+
+  /* ===== Mobile sticky action bar ===== */
+  .mobile-actionbar{
+    display:none;position:fixed;left:0;right:0;bottom:0;z-index:58;
+    background:rgba(255,255,255,.96);backdrop-filter:blur(8px);
+    border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));
+    box-shadow:0 -10px 26px -20px rgba(19,32,24,.35);
+  }
+  .mobile-actionbar-row{display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:8px;}
+  .mobile-actionbar a{
+    display:flex;align-items:center;justify-content:center;gap:6px;
+    padding:12px 6px;border-radius:var(--radius);font-size:12.5px;font-weight:700;text-decoration:none;
+  }
+  .mobile-actionbar a svg{width:15px;height:15px;flex-shrink:0;}
+  .ma-call{background:var(--mint);color:var(--green-dark);border:1px solid var(--green-light);}
+  .ma-wa{background:#fff;color:var(--ink);border:1px solid var(--line);}
+  .ma-lead{background:var(--green);color:#fff;}
+
+  @media (max-width:880px){
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-stats{flex-wrap:wrap;}
+    .services-grid{grid-template-columns:1fr;}
+    .about-grid{grid-template-columns:1fr;}
+    .about-stats{grid-template-columns:repeat(2,auto);row-gap:20px;}
+    .steps-row{grid-template-columns:1fr;gap:28px;}
+    .step:not(:last-child)::after{display:none;}
+    .social-grid{grid-template-columns:repeat(2,1fr);}
+    .contact-grid,.calc-grid{grid-template-columns:1fr;}
+    .navlinks{display:none;}
+    .menu-toggle{display:flex;}
+    .region{flex-direction:column;align-items:flex-start;}
+    .topbar-row{justify-content:center;text-align:center;}
+    .footer-grid{grid-template-columns:1fr;}
+    .channel-options{grid-template-columns:repeat(4,1fr);}
+    body{padding-bottom:70px;}
+    .mobile-actionbar{display:block;}
+    .quickbar{right:14px;bottom:86px;}
+    .to-top{left:14px;bottom:86px;width:40px;height:40px;}
+
+    /* Карусели со свайпом вместо жёстких сеток на мобильном */
+    .listing-grid,.testi-grid{
+      display:flex;grid-template-columns:none;gap:16px;
+      overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;
+      padding:4px 24px 10px;margin:0 -24px;-webkit-overflow-scrolling:touch;
+      scrollbar-width:none;
+    }
+    .listing-grid::-webkit-scrollbar,.testi-grid::-webkit-scrollbar{display:none;}
+    .listing-grid > .listing-card,.testi-grid > .testi-card{
+      flex:0 0 82%;scroll-snap-align:start;
+    }
+  }
+  @media (max-width:560px){
+    section{padding:64px 0;}
+    .hero{padding:56px 0 52px;}
+    .hero-cta{flex-direction:column;align-items:stretch;}
+    .hero-cta .btn{justify-content:center;}
+    .hero-stats{gap:22px 28px;}
+    .topbar-links a span{display:none;}
+    .nav-cta .btn-outline-green{display:none;}
+    .calc-card{padding:22px;}
+    form{padding:22px;}
+    .channel-options{grid-template-columns:repeat(2,1fr);gap:8px;}
+    .channel-option .chip{padding:12px 4px;font-size:11.5px;}
+    .channel-option .chip svg{width:16px;height:16px;}
+    .direct-card{padding:18px;}
+    .footer-grid{gap:26px;}
+    .region{padding:36px 26px;}
+    .testi-grid,.services-grid{gap:16px;}
+    .listing-grid > .listing-card,.testi-grid > .testi-card{flex-basis:88%;}
+    .about-contact-mini{gap:14px;flex-direction:column;}
+    .wrap{padding:0 16px;}
+    .nav{padding:14px 16px;gap:10px;}
+    .logo{font-size:19px;}
+
+    /* iOS: не даём инпутам вызывать зум при фокусе (шрифт ≥16px) */
+    .field input, .field textarea, .calc-field input{font-size:16px;}
+  }
+  @media (max-width:400px){
+    /* На узких экранах кнопка заявки дублируется нижней панелью — убираем из хедера, чтобы не сжимало лого */
+    .nav-cta .btn-primary{display:none;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{transition:none !important;animation:none !important;}
+    .reveal,.reveal-stagger > *{opacity:1 !important;transform:none !important;}
+  }
+</style>
+</head>
+<body>
+<div class="progress-bar" id="progressBar"></div>
+
+<div class="topbar">
+  <div class="wrap topbar-row">
+    <div class="topbar-links">
+      <a href="tel:+79236955700"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5c0 9 7 16 16 16l3-4-6-3-2 2c-3-1-6-4-7-7l2-2-3-6z"/></svg>+7 (923) 695-57-00</a>
+      <a href="mailto:elena.pro55@mail.ru"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>elena.pro55@mail.ru</a>
+    </div>
+    <div class="topbar-links">
+      <span>Пн–Вс, 9:00–21:00 · отвечаю лично</span>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="nav">
+    <div class="logo"><span>Омск</span> · Калининград</div>
+    <nav class="navlinks">
+      <a href="#about">Обо мне</a>
+      <a href="#objects">Объекты</a>
+      <a href="#calc">Калькулятор</a>
+      <a href="#steps">Сделка</a>
+      <a href="#testi">Отзывы</a>
+      <a href="#faq">Вопросы</a>
+      <a href="#social">Соцсети</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+79236955700" class="btn btn-outline-green btn-sm">Позвонить</a>
+      <a href="#contact" class="btn btn-primary">Оставить заявку</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">
+        <svg class="icon-burger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="mobile-drawer-backdrop" id="drawerBackdrop"></div>
+  <nav class="mobile-drawer-panel">
+    <div class="mobile-drawer-grip"></div>
+    <div class="mobile-drawer-head">
+      <div class="logo"><span>Омск</span> · Калининград</div>
+    </div>
+    <a href="#about">Обо мне</a>
+    <a href="#objects">Объекты</a>
+    <a href="#calc">Калькулятор</a>
+    <a href="#steps">Сделка</a>
+    <a href="#testi">Отзывы</a>
+    <a href="#faq">Вопросы</a>
+    <a href="#social">Соцсети</a>
+    <div class="mobile-drawer-cta">
+      <a href="#contact" class="btn btn-primary btn-block" style="border-bottom:none;padding:14px;">Оставить заявку</a>
+      <a href="tel:+79236955700" class="btn btn-outline-green btn-block" style="border-bottom:none;padding:14px;">Позвонить</a>
+    </div>
+    <div class="mobile-drawer-contact">
+      <a href="tel:+79236955700">+7 (923) 695-57-00</a>
+      <a href="mailto:elena.pro55@mail.ru">elena.pro55@mail.ru</a>
+      <div class="mobile-drawer-social">
+        <a href="https://t.me/elenaINWESTOR" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 4L3 11l6 2.2L18 7l-8 7v4l3-3 4 2.8z"/></svg></a>
+        <a href="https://vk.ru/elena.rieltor.omsk" target="_blank" rel="noopener" aria-label="VK"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M8 8c.3 4 2.2 7 5 7M16 8c-.1 1.7-.9 3.2-2 4.4M8 8h1.6M16 8h-1.6M11 15h2"/></svg></a>
+        <a href="https://max.ru/u/f9LHodD0cOKlTtmn7rCShLnhIAcWx65g5sg7RBabRyGzEJe8KANMmaczYGI" target="_blank" rel="noopener" aria-label="MAX"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><path d="M9 14V10l3 3 3-3v4"/></svg></a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<section class="hero">
+  <div class="leaf-texture"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Омск · Калининград</div>
+      <h1>Квартиру<br>подобрать проще,<br>чем <em>кажется</em>.</h1>
+      <p class="lead">Я Елена Косаченко, риелтор в Омске с 2016 года. Подбираю квартиры и дома по всем округам города и области, свожу варианты с Avito, ЦИАН и Домклик, сопровождаю сделку от показа до ключей. Заявка уходит напрямую мне — отвечаю в течение часа.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">Подобрать квартиру</a>
+        <a href="#objects" class="btn btn-soft">Смотреть объекты</a>
+        <a href="tel:+79236955700" class="btn btn-ghost">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5c0 9 7 16 16 16l3-4-6-3-2 2c-3-1-6-4-7-7l2-2-3-6z"/></svg>
+          Позвонить сейчас
+        </a>
+      </div>
+      <div class="hero-stats reveal-stagger">
+        <div class="stat"><b data-count="9" data-suffix=" лет">0</b><span>на рынке Омска</span></div>
+        <div class="stat"><b data-count="410" data-suffix="+">0</b><span>закрытых сделок</span></div>
+        <div class="stat"><b>&lt; 1 часа</b><span>ответ на заявку</span></div>
+        <div class="stat"><b data-count="4.9" data-suffix=" / 5" data-decimal="1">0</b><span>рейтинг клиентов</span></div>
+      </div>
+    </div>
+    <div class="mint-gem" aria-hidden="true"></div>
+  </div>
+</section>
+
+<section class="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Что я делаю</div>
+        <h2>Полный цикл сделки</h2>
+      </div>
+    </div>
+    <div class="services-grid reveal-stagger">
+      <div class="service">
+        <span class="num">01</span>
+        <h3>Подбор объекта</h3>
+        <p>Сверяю квартиры с Avito, ЦИАН, Домклик и закрытыми базами собственников по Омску — экономлю ваше время на просмотрах.</p>
+        <a href="#contact">Подобрать варианты →</a>
+      </div>
+      <div class="service">
+        <span class="num">02</span>
+        <h3>Проверка и сделка</h3>
+        <p>Юридическая проверка истории объекта, сопровождение сделки, ипотека и материнский капитал.</p>
+        <a href="#calc">Рассчитать ипотеку →</a>
+      </div>
+      <div class="service">
+        <span class="num">03</span>
+        <h3>После покупки</h3>
+        <p>Ремонт под ключ, сдача в аренду, управление недвижимостью для собственников из других городов.</p>
+        <a href="#contact">Задать вопрос →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="wrap about-grid">
+    <div class="avatar-frame" aria-hidden="true">
+      <svg viewBox="0 0 300 360" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="150" cy="140" r="58" fill="rgba(255,255,255,.35)"/>
+        <path d="M60 340c8-72 46-108 90-108s82 36 90 108z" fill="rgba(255,255,255,.35)"/>
+      </svg>
+    </div>
+    <div>
+      <div class="eyebrow">Обо мне</div>
+      <h2>Елена Васильевна Косаченко</h2>
+      <span class="role">Риелтор · Омск и Омская область</span>
+      <p class="bio">
+        В недвижимости с 2016 года. Начинала с аренды в Кировском округе, сейчас веду сделки
+        купли-продажи по всему городу — от вторички на Химиках до новостроек на Левобережье.
+        Знаю реальные цены по округам, а не только по объявлениям, поэтому подбираю варианты,
+        которых нет в открытом поиске.
+      </p>
+      <div class="about-badges">
+        <span class="badge">Аттестат риелтора РГР</span>
+        <span class="badge">Член Омской гильдии риелторов</span>
+        <span class="badge">Аккредитация в 6 банках по ипотеке</span>
+        <span class="badge">Юридическое сопровождение сделки</span>
+        <span class="badge">Работаю без предоплаты</span>
+      </div>
+      <div class="about-stats reveal-stagger">
+        <div class="stat"><b data-count="410" data-suffix="+">0</b><span>сделок</span></div>
+        <div class="stat"><b data-count="9">0</b><span>лет опыта</span></div>
+        <div class="stat"><b data-count="5">0</b><span>округов Омска</span></div>
+        <div class="stat"><b data-count="4.9" data-decimal="1">0</b><span>рейтинг клиентов</span></div>
+      </div>
+      <div class="about-contact-mini">
+        <a href="tel:+79236955700"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5c0 9 7 16 16 16l3-4-6-3-2 2c-3-1-6-4-7-7l2-2-3-6z"/></svg>+7 (923) 695-57-00</a>
+        <a href="mailto:elena.pro55@mail.ru"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>elena.pro55@mail.ru</a>
+      </div>
+      <div class="about-cta">
+        <a href="#contact" class="btn btn-primary">Написать мне</a>
+        <a href="tel:+79236955700" class="btn btn-outline-green">+7 (923) 695-57-00</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="objects">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Витрина</div>
+        <h2>Объекты прямо сейчас</h2>
+        <p>Показываю актуальные варианты по Омску сразу с трёх площадок — карточки ведут на первоисточник объявления, а быстрый звонок доступен без перехода.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px;">
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <a href="https://www.avito.ru/omsk/kvartiry" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Avito →</a>
+          <a href="https://www.cian.ru/kupit-kvartiru-omsk/" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">ЦИАН →</a>
+          <a href="https://domclick.ru/" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Домклик →</a>
+        </div>
+        <span id="favCounter"></span>
+      </div>
+    </div>
+
+    <div class="listing-grid reveal-stagger" id="avitoListings"></div>
+
+    <p class="source-note">
+      Данные объектов — образец для вёрстки. Карточки собираются с нескольких площадок (Avito, ЦИАН, Домклик), так как у части сервисов нет открытого API для показа live-объявлений на сторонних сайтах — источник и цену нужно обновлять вручную под конкретные объявления либо подключить партнёрскую интеграцию для бизнеса.
+    </p>
+  </div>
+</section>
+
+<section id="calc" class="calc">
+  <div class="wrap calc-grid">
+    <div class="calc-copy reveal">
+      <div class="eyebrow">Не отходя от сайта</div>
+      <h2>Прикиньте платёж по ипотеке</h2>
+      <p>Двигайте ползунки — расчёт обновляется сразу. Это ориентир: точную ставку и одобрение считаем вместе с банком после заявки.</p>
+      <ul class="calc-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M20 6L9 17l-5-5"/></svg>Аккредитация в 6 банках — подберу программу под вашу ситуацию</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M20 6L9 17l-5-5"/></svg>Помощь с материнским капиталом и льготной ипотекой</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M20 6L9 17l-5-5"/></svg>Проверю одобрение бесплатно, до похода в банк</li>
+      </ul>
+      <a href="#contact" class="btn btn-primary">Обсудить ипотеку со мной</a>
+    </div>
+    <div class="calc-card reveal">
+      <div class="calc-field">
+        <label>Стоимость квартиры <b id="priceOut">5 000 000 ₽</b></label>
+        <input type="range" id="priceRange" min="1000000" max="15000000" step="100000" value="5000000">
+      </div>
+      <div class="calc-field">
+        <label>Первоначальный взнос <b id="downOut">1 000 000 ₽ (20%)</b></label>
+        <input type="range" id="downRange" min="0" max="90" step="1" value="20">
+      </div>
+      <div class="calc-field">
+        <label>Ставка, % годовых <b id="rateOut">17%</b></label>
+        <input type="range" id="rateRange" min="5" max="25" step="0.5" value="17">
+      </div>
+      <div class="calc-field">
+        <label>Срок кредита <b id="termOut">20 лет</b></label>
+        <input type="range" id="termRange" min="1" max="30" step="1" value="20">
+      </div>
+      <div class="calc-result">
+        <span>Платёж в месяц</span>
+        <div class="big" id="paymentOut">0 ₽</div>
+      </div>
+      <p class="calc-note">Расчёт ориентировочный, без учёта страховки и комиссий банка.</p>
+    </div>
+  </div>
+</section>
+
+<section id="steps" class="steps">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Прозрачность</div>
+        <h2>Как проходит сделка</h2>
+        <p>Четыре шага от заявки до ключей — на каждом этапе вы знаете, что происходит.</p>
+      </div>
+    </div>
+    <div class="steps-row reveal-stagger">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Заявка и подбор</h3>
+        <p>Уточняю бюджет и район, за 1–2 дня присылаю подборку из открытых баз и закрытых предложений.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Показы</h3>
+        <p>Организую просмотры в удобное время, еду вместе с вами, отмечаю плюсы и риски каждого объекта.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Проверка и торг</h3>
+        <p>Проверяю юридическую чистоту, помогаю согласовать цену и условия с продавцом.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <h3>Сделка</h3>
+        <p>Сопровождаю оформление, ипотеку и регистрацию — до момента, когда ключи у вас в руках.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="testi" class="testi">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Отзывы</div>
+        <h2>Что говорят клиенты</h2>
+      </div>
+    </div>
+    <div class="testi-grid reveal-stagger">
+      <div class="testi-card">
+        <div class="testi-stars">
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L10 14.9l-5.6 3.1 1.4-6.3L1 8.4l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L10 14.9l-5.6 3.1 1.4-6.3L1 8.4l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L10 14.9l-5.6 3.1 1.4-6.3L1 8.4l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L10 14.9l-5.6 3.1 1.4-6.3L1 8.4l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L10 14.9l-5.6 3.1 1.4-6.3L1 8.4l6.4-.6z"/></svg>
+        </div>
+        <p>Нашли квартиру на Левобережье за две недели, хотя сами искали три месяца безрезультатно. Все просмотры и торг Елена взяла на себя.</p>
+        <div class="testi-who">
+          <div class="testi-avatar">И</div>
+          <div><b>Игорь и Анна</b><span>покупка, Левобережье</span></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L10 14.9l-5.6 3.1 1.4-6.3L1 8.4l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L10 14.9l-5.6 3.1 1.4-6.3L1 8.4l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L10 14.9l-5.6 3.1 1.4-6.3L1 8.4l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L10 14.9l-5.6 3.1 1.4-6.3L1 8.4l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L10 14.9l-5.6 3.1 1.4-6.3L1 8.4l6.4-.6z"/></svg>
+        </div>
+        <p>Продавали квартиру дистанционно из другого города — Елена сама организовывала показы и присылала отчёты. Сделка закрылась без нашего личного присутствия.</p>
+        <div class="testi-who">
+          <div class="testi-avatar">М</div>
+          <div><b>Марина С.</b><span>продажа, Кировский округ</span></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L10 14.9l-5.6 3.1 1.4-6.3L1 8.4l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L10 14.9l-5.6 3.1 1.4-6.3L1 8.4l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L10 14.9l-5.6 3.1 1.4-6.3L1 8.4l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L10 14.9l-5.6 3.1 1.4-6.3L1 8.4l6.4-.6z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L10 14.9l-5.6 3.1 1.4-6.3L1 8.4l6.4-.6z"/></svg>
+        </div>
+        <p>Помогла оформить ипотеку с материнским капиталом, объяснила все шаги простыми словами. Ни одной задержки по документам.</p>
+        <div class="testi-who">
+          <div class="testi-avatar">Д</div>
+          <div><b>Дарья К.</b><span>покупка в ипотеку, Центральный округ</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="faq">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Частые вопросы</div>
+        <h2>Прежде чем написать</h2>
+      </div>
+    </div>
+    <div class="faq-list reveal-stagger">
+      <details class="faq-item" open>
+        <summary>Сколько стоят ваши услуги?<span class="plus"></span></summary>
+        <div class="faq-a">Комиссия обсуждается на первой встрече и зависит от задачи — подбор, сопровождение продажи или полное юридическое сопровождение. Точную сумму назову после короткого звонка, ориентируясь на объект и объём работы.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Работаете ли вы с ипотекой и маткапиталом?<span class="plus"></span></summary>
+        <div class="faq-a">Да, аккредитована в 6 банках Омска, помогаю с одобрением, подбором программы и использованием материнского капитала на любом этапе сделки.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Можно ли продать или купить квартиру дистанционно?<span class="plus"></span></summary>
+        <div class="faq-a">Да, беру на себя показы, переговоры и подготовку документов, а с вами держим связь через звонки, Telegram, MAX или VK — выбираете удобный канал в заявке.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Как быстро вы отвечаете на заявку?<span class="plus"></span></summary>
+        <div class="faq-a">В рабочее время — в течение часа. Если пишете вечером или в выходной, отвечу на следующее утро, но можно и позвонить напрямую по номеру в шапке сайта.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Проверяете ли вы юридическую чистоту объекта?<span class="plus"></span></summary>
+        <div class="faq-a">Да, перед сделкой проверяю историю объекта, собственников и обременения, чтобы исключить риски до подписания документов.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="region">
+  <div class="wrap">
+    <div class="region reveal">
+      <div>
+        <div class="eyebrow">Работаю не только в Омске</div>
+        <h2>Недвижимость Калининград</h2>
+        <p>Также веду подбор объектов в Калининградской области в партнёрстве с местным агентством — полный каталог на сайте-партнёре.</p>
+      </div>
+      <div class="region-cta">
+        <a href="https://39.d0m.ru" target="_blank" rel="noopener" class="btn btn-soft">Перейти на сайт →</a>
+        <a href="#contact" class="btn btn-ghost" style="border-color:#fff;color:#fff;">Спросить про Калининград</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="social">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">На связи</div>
+        <h2>Соцсети</h2>
+      </div>
+    </div>
+    <div class="social-grid centered-grid reveal-stagger">
+      <a class="social-card" href="tel:+79236955700">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 5c0 9 7 16 16 16l3-4-6-3-2 2c-3-1-6-4-7-7l2-2-3-6z"/></svg>
+        <b>Позвонить</b><span>+7 (923) 695-57-00</span>
+      </a>
+      <a class="social-card" href="mailto:elena.pro55@mail.ru">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        <b>Почта</b><span>elena.pro55@mail.ru</span>
+      </a>
+      <a class="social-card" href="https://vk.ru/elena.rieltor.omsk" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M8 8c.3 4 2.2 7 5 7M16 8c-.1 1.7-.9 3.2-2 4.4M8 8h1.6M16 8h-1.6M11 15h2"/></svg>
+        <b>VK</b><span>elena.rieltor.omsk</span>
+      </a>
+      <a class="social-card" href="https://t.me/elenaINWESTOR" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 4L3 11l6 2.2L18 7l-8 7v4l3-3 4 2.8z"/></svg>
+        <b>Telegram</b><span>@elenaINWESTOR</span>
+      </a>
+      <a class="social-card" href="https://max.ru/u/f9LHodD0cOKlTtmn7rCShLnhIAcWx65g5sg7RBabRyGzEJe8KANMmaczYGI" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+          <path d="M9 14V10l3 3 3-3v4" />
+        </svg>
+        <b>MAX</b><span>Написать в MAX</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info">
+      <div class="eyebrow">Заявка</div>
+      <h2>Оставьте телефон —<br>перезвоню сегодня</h2>
+      <p>Выберите удобный способ связи в форме — напишу или позвоню туда, где вам комфортнее отвечать.</p>
+
+      <div class="direct-card">
+        <h3>Или свяжитесь напрямую</h3>
+        <div class="direct-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5c0 9 7 16 16 16l3-4-6-3-2 2c-3-1-6-4-7-7l2-2-3-6z"/></svg>
+          <a href="tel:+79236955700">+7 (923) 695-57-00</a>
+          <a href="tel:+79236955700" class="btn btn-primary btn-sm qbtn">Позвонить</a>
+        </div>
+        <div class="direct-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          <a href="mailto:elena.pro55@mail.ru">elena.pro55@mail.ru</a>
+          <a href="mailto:elena.pro55@mail.ru" class="btn btn-soft btn-sm qbtn">Написать</a>
+        </div>
+        <div class="direct-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 4L3 11l6 2.2L18 7l-8 7v4l3-3 4 2.8z"/></svg>
+          <a href="https://t.me/elenaINWESTOR" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://t.me/elenaINWESTOR" target="_blank" rel="noopener" class="btn btn-ghost btn-sm qbtn">Написать</a>
+        </div>
+        <div class="direct-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><path d="M9 14V10l3 3 3-3v4"/></svg>
+          <a href="https://max.ru/u/f9LHodD0cOKlTtmn7rCShLnhIAcWx65g5sg7RBabRyGzEJe8KANMmaczYGI" target="_blank" rel="noopener">MAX</a>
+          <a href="https://max.ru/u/f9LHodD0cOKlTtmn7rCShLnhIAcWx65g5sg7RBabRyGzEJe8KANMmaczYGI" target="_blank" rel="noopener" class="btn btn-ghost btn-sm qbtn">Написать</a>
+        </div>
+        <div class="direct-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M8 8c.3 4 2.2 7 5 7M16 8c-.1 1.7-.9 3.2-2 4.4M8 8h1.6M16 8h-1.6M11 15h2"/></svg>
+          <a href="https://vk.ru/elena.rieltor.omsk" target="_blank" rel="noopener">VK</a>
+          <a href="https://vk.ru/elena.rieltor.omsk" target="_blank" rel="noopener" class="btn btn-ghost btn-sm qbtn">Написать</a>
+        </div>
+      </div>
+
+      <div class="tg-note">
+        Технически: форма отправляет заявку через бесплатный сервер-посредник (Cloudflare
+        Worker), который пересылает её вам в Telegram. Это нужно, чтобы заявки доходили
+        даже у посетителей без VPN, и чтобы токен бота не был виден в коде сайта.
+      </div>
+    </div>
+    <form id="leadForm">
+      <div class="field">
+        <label for="name">Имя</label>
+        <input id="name" name="name" type="text" placeholder="Как к вам обращаться" required>
+      </div>
+      <div class="field">
+        <label for="phone">Телефон *</label>
+        <input id="phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" required>
+      </div>
+
+      <div class="field channel-field">
+        <label>Как удобнее ответить?</label>
+        <div class="channel-options">
+          <label class="channel-option">
+            <input type="radio" name="channel" value="call" checked>
+            <span class="chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5c0 9 7 16 16 16l3-4-6-3-2 2c-3-1-6-4-7-7l2-2-3-6z"/></svg>
+              Звонок
+            </span>
+          </label>
+          <label class="channel-option">
+            <input type="radio" name="channel" value="telegram">
+            <span class="chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 4L3 11l6 2.2L18 7l-8 7v4l3-3 4 2.8z"/></svg>
+              Telegram
+            </span>
+          </label>
+          <label class="channel-option">
+            <input type="radio" name="channel" value="max">
+            <span class="chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><path d="M9 14V10l3 3 3-3v4"/></svg>
+              MAX
+            </span>
+          </label>
+          <label class="channel-option">
+            <input type="radio" name="channel" value="vk">
+            <span class="chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M8 8c.3 4 2.2 7 5 7M16 8c-.1 1.7-.9 3.2-2 4.4M8 8h1.6M16 8h-1.6M11 15h2"/></svg>
+              VK
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <div class="field" id="usernameField" hidden>
+        <label for="username">Ник в <span id="usernameChannelLabel">Telegram</span> *</label>
+        <input id="username" name="username" type="text" placeholder="@username">
+      </div>
+
+      <div class="field">
+        <label for="comment">Комментарий</label>
+        <textarea id="comment" name="comment" placeholder="Какая квартира интересует, бюджет, район"></textarea>
+      </div>
+      <label class="checkline">
+        <input type="checkbox" id="consent" required>
+        Согласен(на) с пользовательским соглашением и обработкой персональных данных
+      </label>
+      <button type="submit" class="btn btn-primary btn-block" style="margin-top:6px;">Отправить заявку</button>
+      <div id="formStatus"></div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><span>Омск</span> · Калининград</div>
+        <p>Подбор, проверка и сопровождение сделок с недвижимостью в Омске и Омской области. Работаю также по Калининграду в партнёрстве с местным агентством.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Навигация</h4>
+        <a href="#objects">Объекты</a>
+        <a href="#calc">Калькулятор ипотеки</a>
+        <a href="#testi">Отзывы</a>
+        <a href="#faq">Вопросы</a>
+      </div>
+      <div class="footer-col">
+        <h4>Контакты</h4>
+        <a href="tel:+79236955700">+7 (923) 695-57-00</a>
+        <a href="mailto:elena.pro55@mail.ru">elena.pro55@mail.ru</a>
+        <a href="https://t.me/elenaINWESTOR" target="_blank" rel="noopener">Telegram</a>
+        <a href="https://vk.ru/elena.rieltor.omsk" target="_blank" rel="noopener">VK</a>
+        <a href="https://max.ru/u/f9LHodD0cOKlTtmn7rCShLnhIAcWx65g5sg7RBabRyGzEJe8KANMmaczYGI" target="_blank" rel="noopener">MAX</a>
+      </div>
+    </div>
+    <div class="footer-row">
+      <span>© 2026 О55 · Елена Васильевна Косаченко, риелтор в Омске</span>
+      <span>Пн–Вс, 9:00–21:00 · Аттестат РГР · Член Омской гильдии риелторов</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-actionbar">
+  <div class="mobile-actionbar-row">
+    <a href="tel:+79236955700" class="ma-call">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5c0 9 7 16 16 16l3-4-6-3-2 2c-3-1-6-4-7-7l2-2-3-6z"/></svg>
+      Звонок
+    </a>
+    <a href="https://t.me/elenaINWESTOR" target="_blank" rel="noopener" class="ma-wa">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 4L3 11l6 2.2L18 7l-8 7v4l3-3 4 2.8z"/></svg>
+      Telegram
+    </a>
+    <a href="#contact" class="ma-lead">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+      Оставить заявку
+    </a>
+  </div>
+</div>
+
+<button class="to-top" id="toTop" aria-label="Наверх">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<div class="quickbar" id="quickbar">
+  <div class="quickbar-options">
+    <a href="tel:+79236955700"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5c0 9 7 16 16 16l3-4-6-3-2 2c-3-1-6-4-7-7l2-2-3-6z"/></svg></span>Позвонить</a>
+    <a href="https://t.me/elenaINWESTOR" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 4L3 11l6 2.2L18 7l-8 7v4l3-3 4 2.8z"/></svg></span>Telegram</a>
+    <a href="https://max.ru/u/f9LHodD0cOKlTtmn7rCShLnhIAcWx65g5sg7RBabRyGzEJe8KANMmaczYGI" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><path d="M9 14V10l3 3 3-3v4"/></svg></span>MAX</a>
+    <a href="#contact"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>Заявка</a>
+  </div>
+  <button class="quickbar-toggle" id="quickbarToggle" aria-label="Быстрая связь">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+  </button>
+</div>
+
+<script>
+  // ---- Витрина: карточки с чередованием источников (Avito / ЦИАН / Домклик) ----
+  const listings = [
+    { price:"4 950 000 ₽", addr:"Кировский округ, ул. Крупской", meta:"2 комн · 52 м² · 5/9 эт", url:"https://www.avito.ru/omsk/kvartiry", source:"AVITO" },
+    { price:"3 200 000 ₽", addr:"Центральный округ, ул. Красный Путь", meta:"1 комн · 33 м² · 3/5 эт", url:"https://www.cian.ru/kupit-kvartiru-omsk/", source:"ЦИАН" },
+    { price:"6 700 000 ₽", addr:"Левобережье, ЖК на Иртыше", meta:"3 комн · 78 м² · 8/16 эт", url:"https://domclick.ru/", source:"ДОМКЛИК" },
+    { price:"5 400 000 ₽", addr:"Октябрьский округ, ул. Магистральная", meta:"2 комн · 58 м² · 4/10 эт", url:"https://www.avito.ru/omsk/kvartiry", source:"AVITO" },
+    { price:"7 900 000 ₽", addr:"Ленинский округ, ЖК Тихвинский", meta:"3 комн · 84 м² · 12/18 эт", url:"https://www.cian.ru/kupit-kvartiru-omsk/", source:"ЦИАН" },
+    { price:"2 850 000 ₽", addr:"Советский округ, ул. Химиков", meta:"1 комн · 31 м² · 2/5 эт", url:"https://domclick.ru/", source:"ДОМКЛИК" }
+  ];
+
+  const grid = document.getElementById('avitoListings');
+  grid.innerHTML = listings.map(l => `
+    <div class="listing-card">
+      <a href="${l.url}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;">
+        <div class="listing-photo">
+          <span class="listing-source">${l.source}</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#132018" stroke-width="1.4"><path d="M4 20V10l8-6 8 6v10"/><path d="M9 20v-6h6v6"/></svg>
+        </div>
+        <div class="listing-body">
+          <div class="listing-price">${l.price}</div>
+          <div class="listing-addr">${l.addr}</div>
+          <div class="listing-meta">${l.meta.split(' · ').map(m=>`<span>${m}</span>`).join('')}</div>
+        </div>
+      </a>
+      <button class="listing-fav" type="button" aria-label="В избранное" data-fav="0">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.35-9.5-8.8C.7 8 2 4.5 5.4 4c2-.3 3.7.7 4.6 2.2C10.9 4.7 12.6 3.7 14.6 4c3.4.5 4.7 4 3.9 7.2C16 15.65 12 20 12 20z"/></svg>
+      </button>
+      <div class="listing-body" style="padding-top:0;">
+        <div class="listing-actions">
+          <a class="listing-link" href="${l.url}" target="_blank" rel="noopener">Смотреть объявление <span>→</span></a>
+          <a class="listing-call" href="tel:+79236955700" aria-label="Позвонить по объекту">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5c0 9 7 16 16 16l3-4-6-3-2 2c-3-1-6-4-7-7l2-2-3-6z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  // ---- Избранные объекты (в памяти сессии) ----
+  const favSection = document.getElementById('objects');
+  const favCounter = document.getElementById('favCounter');
+  let favCount = 0;
+  grid.querySelectorAll('.listing-fav').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const active = btn.dataset.fav === '1';
+      btn.dataset.fav = active ? '0' : '1';
+      btn.classList.toggle('is-fav', !active);
+      favCount += active ? -1 : 1;
+      if (favCounter) {
+        favCounter.textContent = favCount > 0 ? `Избранное: ${favCount}` : '';
+      }
+    });
+  });
+
+  // ---- Ипотечный калькулятор ----
+  const priceRange = document.getElementById('priceRange');
+  const downRange = document.getElementById('downRange');
+  const rateRange = document.getElementById('rateRange');
+  const termRange = document.getElementById('termRange');
+  const priceOut = document.getElementById('priceOut');
+  const downOut = document.getElementById('downOut');
+  const rateOut = document.getElementById('rateOut');
+  const termOut = document.getElementById('termOut');
+  const paymentOut = document.getElementById('paymentOut');
+
+  function fmt(n){ return Math.round(n).toLocaleString('ru-RU') + ' ₽'; }
+
+  function calc(){
+    const price = Number(priceRange.value);
+    const downPct = Number(downRange.value);
+    const rate = Number(rateRange.value);
+    const years = Number(termRange.value);
+
+    const downSum = price * downPct / 100;
+    const loan = Math.max(price - downSum, 0);
+    const monthlyRate = rate / 100 / 12;
+    const n = years * 12;
+
+    let payment = 0;
+    if (loan > 0 && monthlyRate > 0) {
+      payment = loan * (monthlyRate * Math.pow(1 + monthlyRate, n)) / (Math.pow(1 + monthlyRate, n) - 1);
+    } else if (loan > 0) {
+      payment = loan / n;
+    }
+
+    priceOut.textContent = fmt(price);
+    downOut.textContent = `${fmt(downSum)} (${downPct}%)`;
+    rateOut.textContent = `${rate}%`;
+    termOut.textContent = `${years} ${years === 1 ? 'год' : (years < 5 ? 'года' : 'лет')}`;
+    paymentOut.textContent = fmt(payment) + ' / мес';
+  }
+  [priceRange, downRange, rateRange, termRange].forEach(el => el.addEventListener('input', calc));
+  calc();
+
+  // ---- Плавающая кнопка быстрой связи ----
+  const quickbar = document.getElementById('quickbar');
+  document.getElementById('quickbarToggle').addEventListener('click', () => {
+    quickbar.classList.toggle('open');
+  });
+
+  // ---- Мобильное меню (drawer) ----
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileDrawer = document.getElementById('mobileDrawer');
+  const drawerBackdrop = document.getElementById('drawerBackdrop');
+
+  function closeDrawer(){
+    mobileDrawer.classList.remove('open');
+    menuToggle.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+  function openDrawer(){
+    mobileDrawer.classList.add('open');
+    menuToggle.classList.add('open');
+    menuToggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+  menuToggle.addEventListener('click', () => {
+    mobileDrawer.classList.contains('open') ? closeDrawer() : openDrawer();
+  });
+  drawerBackdrop.addEventListener('click', closeDrawer);
+  mobileDrawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
+  window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDrawer(); });
+
+  // ---- Прогресс-бар скролла ----
+  const progressBar = document.getElementById('progressBar');
+  function updateProgress(){
+    const h = document.documentElement;
+    const scrolled = h.scrollTop;
+    const height = h.scrollHeight - h.clientHeight;
+    progressBar.style.width = (height > 0 ? (scrolled / height) * 100 : 0) + '%';
+  }
+
+  // ---- Кнопка "наверх" ----
+  const toTop = document.getElementById('toTop');
+  toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  function onScroll(){
+    updateProgress();
+    toTop.classList.toggle('show', window.scrollY > 480);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // ---- Появление элементов при скролле ----
+  const revealTargets = document.querySelectorAll('.reveal, .reveal-stagger');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14, rootMargin: '0px 0px -60px 0px' });
+    revealTargets.forEach(el => io.observe(el));
+  } else {
+    revealTargets.forEach(el => el.classList.add('in-view'));
+  }
+
+  // ---- Анимированные счётчики ----
+  const counters = document.querySelectorAll('[data-count]');
+  function animateCounter(el){
+    const target = parseFloat(el.dataset.count);
+    const decimals = parseInt(el.dataset.decimal || '0', 10);
+    const suffix = el.dataset.suffix || '';
+    const duration = 1100;
+    const start = performance.now();
+    function tick(now){
+      const p = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      const val = target * eased;
+      el.textContent = val.toFixed(decimals) + suffix;
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+  if ('IntersectionObserver' in window && counters.length) {
+    const cio = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          cio.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.6 });
+    counters.forEach(el => cio.observe(el));
+  } else {
+    counters.forEach(el => {
+      el.textContent = parseFloat(el.dataset.count).toFixed(parseInt(el.dataset.decimal || '0', 10)) + (el.dataset.suffix || '');
+    });
+  }
+
+  // ---- Активная ссылка меню по секции на экране ----
+  const navLinks = document.querySelectorAll('.navlinks a[href^="#"]');
+  const sections = Array.from(navLinks).map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  if ('IntersectionObserver' in window && sections.length) {
+    const navIo = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const id = '#' + entry.target.id;
+        const link = document.querySelector(`.navlinks a[href="${id}"]`);
+        if (!link) return;
+        if (entry.isIntersecting) {
+          navLinks.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+    sections.forEach(s => navIo.observe(s));
+  }
+
+  // ---- Отправка заявки через Cloudflare Worker (см. файл worker.js) ----
+  //
+  // ЗАЧЕМ ТАК: раньше браузер посетителя сам стучался в api.telegram.org,
+  // но в России Telegram сильно заблокирован, и у части посетителей без VPN
+  // заявка просто не доходила. Теперь запрос идёт на Cloudflare Worker
+  // (не заблокирован), а уже сервер Cloudflare пересылает его в Telegram.
+  // Токен бота теперь хранится только в настройках Cloudflare, а не в коде сайта.
+  //
+  // Вставьте сюда адрес вашего Worker после того, как создадите его
+  // (инструкция — в чате). Выглядит как https://имя.ваш-поддомен.workers.dev
+  const WORKER_URL = 'https://floral-paper-4d78.ewecrow78.workers.dev/';
+
+  const form = document.getElementById('leadForm');
+  const status = document.getElementById('formStatus');
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const submitBtnLabel = submitBtn.textContent;
+
+  const channelLabels = { call: 'Звонок', telegram: 'Telegram', max: 'MAX', vk: 'VK' };
+  const usernameChannels = { telegram: 'Telegram', vk: 'VK' };
+
+  // ---- Показ поля "ник" при выборе Telegram/VK ----
+  const usernameField = document.getElementById('usernameField');
+  const usernameInput = document.getElementById('username');
+  const usernameChannelLabel = document.getElementById('usernameChannelLabel');
+  const channelRadios = form.querySelectorAll('input[name="channel"]');
+
+  function syncUsernameField(){
+    const checked = form.querySelector('input[name="channel"]:checked');
+    const value = checked ? checked.value : 'call';
+    if (usernameChannels[value]) {
+      usernameField.hidden = false;
+      usernameInput.required = true;
+      usernameInput.placeholder = value === 'telegram' ? '@username' : 'vk.ru/ваш_ник или @ник';
+      usernameChannelLabel.textContent = usernameChannels[value];
+    } else {
+      usernameField.hidden = true;
+      usernameInput.required = false;
+    }
+  }
+  channelRadios.forEach(r => r.addEventListener('change', syncUsernameField));
+  syncUsernameField();
+
+  function setStatus(kind, text){
+    status.className = kind;
+    status.textContent = text;
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    if (!WORKER_URL || WORKER_URL.indexOf('__WORKER_URL__') === 0) {
+      setStatus('err', 'Форма ещё не настроена: не вписан адрес Worker в код сайта. Позвоните напрямую: +7 (923) 695-57-00.');
+      return;
+    }
+
+    const name = form.name.value.trim();
+    const phone = form.phone.value.trim();
+    const channel = form.channel.value;
+    const username = usernameField.hidden ? '' : usernameInput.value.trim();
+    const comment = form.comment.value.trim();
+
+    if (!name || !phone) {
+      setStatus('err', 'Заполните, пожалуйста, имя и телефон.');
+      return;
+    }
+
+    if (usernameChannels[channel] && !username) {
+      setStatus('err', `Укажите, пожалуйста, ваш ник в ${usernameChannels[channel]}.`);
+      usernameInput.focus();
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Отправляем…';
+    setStatus('', '');
+
+    try {
+      const res = await fetch(WORKER_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, phone, channel, username, comment })
+      });
+      const data = await res.json();
+      if (!data.ok) throw new Error(data.error || 'worker_error');
+      setStatus('ok', 'Спасибо! Заявка отправлена, свяжусь удобным вам способом.');
+      form.reset();
+      if (navigator.vibrate) navigator.vibrate(30);
+    } catch (err) {
+      setStatus('err', 'Не получилось отправить. Позвоните напрямую: +7 (923) 695-57-00.');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = submitBtnLabel;
+    }
+  });
+
+  // ---- Автоформат телефона: +7 (___) ___-__-__ ----
+  const phoneInput = document.getElementById('phone');
+  if (phoneInput) {
+    phoneInput.addEventListener('input', () => {
+      let digits = phoneInput.value.replace(/\D/g, '');
+      if (digits.startsWith('8')) digits = '7' + digits.slice(1);
+      if (!digits.startsWith('7')) digits = '7' + digits;
+      digits = digits.slice(0, 11);
+      let out = '+7';
+      if (digits.length > 1) out += ' (' + digits.slice(1, 4);
+      if (digits.length >= 4) out += ') ' + digits.slice(4, 7);
+      if (digits.length >= 7) out += '-' + digits.slice(7, 9);
+      if (digits.length >= 9) out += '-' + digits.slice(9, 11);
+      phoneInput.value = out;
+    });
+    phoneInput.addEventListener('focus', () => {
+      if (!phoneInput.value) phoneInput.value = '+7 ';
+    });
+  }
+
+  // ---- Свайп для закрытия мобильного меню ----
+  (function(){
+    const panel = document.querySelector('.mobile-drawer-panel');
+    if (!panel) return;
+    let startX = 0, currentX = 0, dragging = false, panelWidth = 0;
+
+    panel.addEventListener('touchstart', (e) => {
+      if (!mobileDrawer.classList.contains('open')) return;
+      startX = currentX = e.touches[0].clientX;
+      panelWidth = panel.offsetWidth;
+      dragging = true;
+      panel.style.transition = 'none';
+    }, { passive: true });
+
+    panel.addEventListener('touchmove', (e) => {
+      if (!dragging) return;
+      currentX = e.touches[0].clientX;
+      const delta = Math.max(0, currentX - startX);
+      panel.style.transform = `translateX(${delta}px)`;
+    }, { passive: true });
+
+    panel.addEventListener('touchend', () => {
+      if (!dragging) return;
+      dragging = false;
+      panel.style.transition = '';
+      const delta = Math.max(0, currentX - startX);
+      panel.style.transform = '';
+      if (delta > panelWidth * 0.32) {
+        closeDrawer();
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
